@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CAC Research and Creation Fellowship Application Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/parsley.js"></script>
+    <style>
+    body {
+        color: #000;
+        font-family: helvetica;
+        font-size: 16px;
+        margin: 0px;
+    }
+    
+    #wrapper {
+        width: 60%;
+        padding-left: 20px;
+        padding-bottom: 50px;
+    }
+    
+    #input-item {
+        padding-top: 40px;
+        font-size: 22px;
+        padding-left: 5px;
+    }
+    
+    #input-item input {
+        width: 300px;
+        height: 25px;
+        font-size: 20px;
+    }
+    
+    #input-item input[type="submit"] {
+        width: 100px;
+        height: 40px;
+        font-size: 22px;
+    }
+    
+    #text-field {
+        padding-top: 10x;
+        display: inline-block;
+        position: relative;
+        float: right;
+    }
+    
+    hr {
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    textarea {
+        width: 300px;
+        height: 130px;
+        font-size: 20px;
+    }
+    
+    #guidelines {
+        width: 97%;
+        border-style: solid;
+        border-width: 1px;
+        padding: 10px;
+        font-size: 18px;
+        background-color: #eee;
+        /*color: #ddd;*/
+    }
+    
+    select {
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    h2 {
+        color: red;
+    }
+    
+    #timeLeft {
+        display: inline-block;
+    }
+    
+    #titles {
+        line-height: 25px;
+        padding-left: 10px;
+    }
+    
+    a {
+        color: #FC8E44;
+    }
+    
+    a:visited {
+        color: #FC8E44;
+    }
+    
+    .parsley-success {
+        color: #468847;
+        background-color: #DFF0D8;
+        border: 1px solid #D6E9C6;
+    }
+    
+    .parsley-error {
+        color: #B94A48;
+        background-color: #F2DEDE;
+        border: 1px solid #EED3D7;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- <img src="images/logo.png"> -->
+        <div id="titles">
+            <img src="images/logo.png">
+            <h1>THREE-ROOMS Submission Form / 2016</h1>
+            <h2>Deadline: 15/07/2016</h2>
+        </div>
+        <div id="guidelines">
+            <strong><p>Please answer and complete the following form. Take in account the following guidelines:</p></strong>
+            <p><strong>1.</strong> All fields are marked with <strong>*</strong> are required.</p>
+            <p> <strong>2.</strong> If the applicant doesn't have online portfolio website, he/she must provide a list of URLs using the "Other Links" field in this form. We recommend to use <a href="https://www.vimeo.com/" target="_blank">vimeo</a> for video samples, <a href="https://www.flickr.com/" target="_blank">flickr</a> and <a href="https://www.soundcloud.com/" target="_blank">soundcloud</a> for audio samples.</p>
+            <p><strong>3.</strong> If the applicant does have an online portfolio and still wants to provide extra URLs for additional work samples he/she is free to do so by using the "Other Links" field in this form.</p>
+            <p><strong>4.</strong> Finally, please upload the required files (maximum size 5.0 Mb): Portfolio PDF and your CV/Resume PDF.</p>
+            <p><strong>IMPORTANT NOTE:</strong> Please fill out this form when you have all the information ready. The system <strong>DOES NOT</strong> save incomplete submissions.</p>
+            <p><strong>Any questions of problems please contact: <a>fellowship@chronusartcenter.org</a></strong></p>
+        </div>
+        <form id="app-form" method="post" enctype="multipart/form-data" action="/submitted">
+            <div id="input-item">
+                <strong>* Full Name: </strong>
+                <div id="text-field">
+                    <input type="text" name="name" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* Email: </strong>
+                <div id="text-field">
+                    <input type="email" name="email" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* Nationality: </strong>
+                <div id="text-field">
+                    <input type="text" name="nationality" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* Date of Birth (dd/mm/yy): </strong>
+                <div id="text-field">
+                    <input type="text" name="birthdate" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* Full Address: </strong>
+                <div id="text-field">
+                    <input type="textarea" name="address" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* Phone: </strong>
+                <div id="text-field">
+                    <input type="text" name="phone" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* Country of Residence: </strong>
+                <div id="text-field">
+                    <input type="text" name="residence" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>Website (http://my-portfolio.com): </strong>
+                <div id="text-field">
+                    <input type="url" name="website">
+                </div>
+            </div>
+            <hr>
+            <div id="input-item" style="height:120px">
+                <strong>* Bio (max: 1000 chars): </strong>
+                <div id="text-field">
+                    <textarea name="bio" data-parsley-maxlength="1000" required></textarea>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* Nominated By: </strong>
+                <div id="text-field">
+                    <input type="text" name="nominated" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item" style="height:120px">
+                <strong>Other Links: </strong>
+                <div id="text-field">
+                    <textarea name="extra"></textarea>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* Portfolio PDF: </strong>
+                <div id="text-field">
+                    <input type="file" name="portfolio" data-parsley-max-file-size="5000" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <strong>* CV / Resume PDF: </strong>
+                <div id="text-field">
+                    <input type="file" name="cv" data-parsley-max-file-size="5000" required>
+                </div>
+            </div>
+            <hr>
+            <div id="input-item">
+                <input type="submit">
+            </div>
+        </form>
+        <script type="text/javascript">
+        $(function() {
+            $('#app-form').parsley().on('field:validated', function() {
+                    var ok = $('.parsley-error').length === 0;
+                    $('.bs-callout-info').toggleClass('hidden', !ok);
+                    $('.bs-callout-warning').toggleClass('hidden', ok);
+                })
+                .on('form:submit', function() {
+                    return true; // Don't submit form for this demo
+                });
+        });
+        window.Parsley.addValidator('maxFileSize', {
+            validateString: function(_value, maxSize, parsleyInstance) {
+                if (!window.FormData) {
+                    alert('You are making all developpers in the world cringe. Upgrade your browser!');
+                    return true;
+                }
+                var files = parsleyInstance.$element[0].files;
+                return files.length != 1 || files[0].size <= maxSize * 1024;
+            },
+            requirementType: 'integer',
+            messages: {
+                en: 'This file should not be larger than %s Kb',
+                fr: "Ce fichier est plus grand que %s Kb."
+            }
+        });
+        </script>
+    </div>
+</body>
+
+</html>
